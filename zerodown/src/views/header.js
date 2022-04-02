@@ -26,28 +26,28 @@ const yearValue = [
 
 function HeaderComponent(){
 
-    const [regionName, setRegionName] = useState([{ label: 'None', value: 'None' }]);
-
+    const [regionNames, setRegionNames] = useState();
+    
     useEffect(()=>{
-        const fetchData = async () =>{
-            try {
-              const {regionName: response} = await axios.get('https://zerdown.herokuapp.com/housing_data/regions');
-              setRegionName(regionName);
-              console.log(regionName);
-
-            } catch (error) {
-              console.error(error.message);
-            }
-          }
-          fetchData();
+        axios.get(`https://zerdown.herokuapp.com/housing_data/regions`)
+        .then(res => {
+            const regions = res.data.regions;
+            const regionsList = regions.map(region => ({ 
+                label: region._id, 
+                value: region.region_name 
+            }));
+            setRegionNames({ regionsList });
+        })
     },[]);
 
     return (
         <div className="container-box header">
             <div className="row row-header">
-                <div className="col-6">
-                    <Select placeholder={<div>Select a Region</div>} options={regionName}/>
-                </div>
+                {regionNames && 
+                    <div className="col-6">
+                        <Select placeholder={<div>Select a Region</div>} options={regionNames}/>
+                    </div>
+                }
                 <div className="col-3">
                     <Select placeholder={<div>County/Metro</div>} options={regionType}/>
                 </div>
