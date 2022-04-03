@@ -34,19 +34,20 @@ function BarChartComponent(){
     return(
         <div className="row col-8 offset-2 mb-5">
             <Bar
-          data={regionData}
-          options={{
-            title:{
-              display:true,
-              text:'Line Chart',
-              fontSize:25
-            },
-            legend:{
-              display:true,
-              position:'top',
-            }
-          }}
-        />
+                data={regionData}
+                options={{
+                    title:{
+                    display:true,
+                    text:'Line Chart',
+                    fontSize:25
+                    },
+                    legend:{
+                    display:true,
+                    position:'top',
+                    }
+                }}
+            />
+            <h4 className='offset-4'>Region Names and Total Houses Sold</h4>
         </div>
         
     );

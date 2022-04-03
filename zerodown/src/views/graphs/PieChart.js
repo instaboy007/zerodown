@@ -51,6 +51,7 @@ function PieChartComponent(){
                     }
                 }}
             />
+            <h4>Active Listings and Total Houses Sold</h4>
         </div>
     );
 }

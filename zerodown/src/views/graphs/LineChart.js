@@ -33,19 +33,20 @@ function LineChartComponent(){
     return(
         <div className="row col-8 offset-2 mb-5">
             <Line
-          data={regionData}
-          options={{
-            title:{
-              display:true,
-              text:'Line Chart',
-              fontSize:25
-            },
-            legend:{
-              display:true,
-              position:'right',
-            }
-          }}
-        />
+                data={regionData}
+                options={{
+                    title:{
+                    display:true,
+                    text:'Line Chart',
+                    fontSize:25
+                    },
+                    legend:{
+                    display:true,
+                    position:'right',
+                    }
+                }}
+            />
+            <h4 className='offset-4'>Region Names and Active Listings</h4>
         </div>
         
     );
