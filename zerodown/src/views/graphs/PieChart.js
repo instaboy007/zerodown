@@ -10,8 +10,8 @@ function PieChartComponent(){
         axios.get(`https://zerdown.herokuapp.com/housing_data/`)
         .then(res => {
 
-            var totalActiveListing=10;
-            var totalHousesSold=90;
+            var totalActiveListing=0;
+            var totalHousesSold=0;
             for (var d in res.data.housing_data){
                 totalHousesSold+=res.data.housing_data[d].total_homes_sold;
                 totalActiveListing+=res.data.housing_data[d].total_active_listings;
@@ -35,7 +35,7 @@ function PieChartComponent(){
 
     return(
         <div className="row col-4 offset-4 mb-5">
-            <Pie
+            <Pie className='mb-2'
                 data={regionData}
                 options={{
                     responsive: true,
@@ -51,7 +51,7 @@ function PieChartComponent(){
                     }
                 }}
             />
-            <h4>Active Listings and Total Houses Sold</h4>
+            <h4 className="offset-1 mb-2">Active Listings and Total Houses Sold</h4>
         </div>
     );
 }

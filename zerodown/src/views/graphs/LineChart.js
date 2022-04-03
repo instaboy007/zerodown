@@ -31,8 +31,8 @@ function LineChartComponent(){
     },[]);
 
     return(
-        <div className="row col-8 offset-2 mb-5">
-            <Line
+        <div className="row col-9 offset-1 mb-5">
+            <Line className='mb-2'
                 data={regionData}
                 options={{
                     title:{
@@ -41,12 +41,12 @@ function LineChartComponent(){
                     fontSize:25
                     },
                     legend:{
-                    display:true,
+                    display:false,
                     position:'right',
                     }
                 }}
             />
-            <h4 className='offset-4'>Region Names and Active Listings</h4>
+            <h4 className='offset-5  mb-2'>Region Names and Active Listings</h4>
         </div>
         
     );
