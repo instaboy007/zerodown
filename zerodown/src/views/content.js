@@ -1,5 +1,5 @@
 import React from "react";
-import LineChart from "./graphs/LineChart";
+// import LineChart from "./graphs/LineChart";
 import PieChartComponent from "./graphs/PieChart";
 
 function ContentComponent(props){
