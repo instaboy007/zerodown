@@ -1,53 +1,71 @@
-import React from 'react';
-import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend,
-} from 'chart.js';
-import { Bar } from 'react-chartjs-2';
-import faker from 'faker';
+import React, {Component} from 'react';
+import {Bar, Line, Pie} from 'react-chartjs-2';
 
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+class Chart extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      chartData:props.chartData
+    }
+  }
 
-export const options = {
-  responsive: true,
-  plugins: {
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart',
-    },
-  },
-};
+  static defaultProps = {
+    displayTitle:true,
+    displayLegend: true,
+    legendPosition:'right',
+    location:'City'
+  }
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+  render(){
+    return (
+      <div className="chart">
+        <Bar
+          data={this.state.chartData}
+          options={{
+            title:{
+              display:this.props.displayTitle,
+              text:'Largest Cities In '+this.props.location,
+              fontSize:25
+            },
+            legend:{
+              display:this.props.displayLegend,
+              position:this.props.legendPosition
+            }
+          }}
+        />
 
-export const data = {
-  labels,
-  datasets: [
-    {
-      label: 'Dataset 1',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: 'rgba(255, 99, 132, 0.5)',
-    },
-    {
-      label: 'Dataset 2',
-      data: labels.map(() => faker.datatype.number({ min: 0, max: 1000 })),
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
-  ],
-};
+        <Line
+          data={this.state.chartData}
+          options={{
+            title:{
+              display:this.props.displayTitle,
+              text:'Largest Cities In '+this.props.location,
+              fontSize:25
+            },
+            legend:{
+              display:this.props.displayLegend,
+              position:this.props.legendPosition
+            }
+          }}
+        />
 
-export function VerticalBarChart() {
-  return <Bar options={options} data={data} />;
+        <Pie
+          data={this.state.chartData}
+          options={{
+            title:{
+              display:this.props.displayTitle,
+              text:'Largest Cities In '+this.props.location,
+              fontSize:25
+            },
+            legend:{
+              display:this.props.displayLegend,
+              position:this.props.legendPosition
+            }
+          }}
+        />
+      </div>
+    )
+  }
 }
+
+export default Chart;

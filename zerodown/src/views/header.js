@@ -26,17 +26,17 @@ const yearValue = [
 
 function HeaderComponent(){
 
-    const [regionNames, setRegionNames] = useState();
+    const [regionNames, setRegionNames] = useState({label:"None",value:"None"});
     
     useEffect(()=>{
         axios.get(`https://zerdown.herokuapp.com/housing_data/regions`)
         .then(res => {
             const regions = res.data.regions;
-            const regionsList = regions.map(region => ({ 
-                label: region._id, 
+            const regionNames = regions.map(region => ({ 
+                label: region.region_name, 
                 value: region.region_name 
             }));
-            setRegionNames({ regionsList });
+            setRegionNames(regionNames);
         })
     },[]);
 
