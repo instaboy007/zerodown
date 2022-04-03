@@ -2,7 +2,7 @@
 
 Git Clone this Repository using
 
-    git clone 
+    git clone https://github.com/instaboy007/zerodown.git 
 
  Install Node modules using
  
