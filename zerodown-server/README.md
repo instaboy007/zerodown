@@ -19,3 +19,11 @@ Starting the Server
     python wsgi.py
 
 ## Endpoints
+
+Getting all the HousingData
+
+https://zerdown.herokuapp.com/housing_data/
+
+Getting only the Region Name from the Housing Data
+
+https://zerdown.herokuapp.com/housing_data/regions
