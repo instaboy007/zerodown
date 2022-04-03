@@ -1,5 +1,5 @@
 import React from "react";
-// import LineChart from "./graphs/LineChart";
+import LineChart from "./graphs/LineChart";
 import PieChartComponent from "./graphs/PieChart";
 
 function ContentComponent(props){
@@ -8,7 +8,7 @@ function ContentComponent(props){
             <div className="row">
                 <div className="col-12">
                     <PieChartComponent/>
-                    <h1>Graph2</h1>
+                    <LineChart />
                     <h1>Graph3</h1>
                     <h1>Graph4</h1>
                 </div>

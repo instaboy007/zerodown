@@ -24,7 +24,7 @@ function PieChartComponent(){
             // }));
             setRegionData(regionData);
         })
-    },[]);
+    });
 
     return(
         <div className="row col-4 offset-4">
