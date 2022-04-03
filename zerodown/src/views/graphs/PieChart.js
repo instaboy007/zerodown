@@ -1,10 +1,11 @@
 import React,{useState,useEffect} from 'react';
 import {Pie} from 'react-chartjs-2';
 import axios from 'axios';
+import { chartColors } from './colors';
 
 function PieChartComponent(){
     const [regionData,setRegionData] = useState();
-
+    const colorPicker=chartColors.sort(() => 0.5-Math.random());
     useEffect(()=>{
         axios.get(`https://zerdown.herokuapp.com/housing_data/`)
         .then(res => {
@@ -14,15 +15,7 @@ function PieChartComponent(){
                 datasets:[{
                     label :'Active Listings and Houses Sold',
                     data :[res.data.housing_data[0].total_active_listings,res.data.housing_data[0].total_homes_sold],
-                    backgroundColor:[
-                        'rgba(255, 99, 132, 0.6)',
-                        'rgba(54, 162, 235, 0.6)',
-                        'rgba(255, 206, 86, 0.6)',
-                        'rgba(75, 192, 192, 0.6)',
-                        'rgba(153, 102, 255, 0.6)',
-                        'rgba(255, 159, 64, 0.6)',
-                        'rgba(255, 99, 132, 0.6)'
-                      ]
+                    backgroundColor:colorPicker.slice(0,2)
                 }],
             };
             // const regionData=res.data.housingData.map( region =>({
