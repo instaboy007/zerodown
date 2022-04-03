@@ -1,4 +1,4 @@
-# zerodown
+# zerodown-server
 ```
 py -3 -m venv venv
 ```
