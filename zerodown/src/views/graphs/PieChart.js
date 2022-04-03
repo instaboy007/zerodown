@@ -9,12 +9,19 @@ function PieChartComponent(){
     useEffect(()=>{
         axios.get(`https://zerdown.herokuapp.com/housing_data/`)
         .then(res => {
-            console.log(res.data.housing_data[0]);
+
+            var totalActiveListing=10;
+            var totalHousesSold=90;
+            for (var d in res.data.housing_data){
+                totalHousesSold+=res.data.housing_data[d].total_homes_sold;
+                totalActiveListing+=res.data.housing_data[d].total_active_listings;
+            }
+
             const regionData={
                 labels :['Active Listings', 'Houses Sold'],
                 datasets:[{
                     label :'Active Listings and Houses Sold',
-                    data :[res.data.housing_data[0].total_active_listings,res.data.housing_data[0].total_homes_sold],
+                    data :[totalActiveListing,totalHousesSold],
                     backgroundColor:colorPicker.slice(0,2)
                 }],
             };
@@ -24,10 +31,10 @@ function PieChartComponent(){
             // }));
             setRegionData(regionData);
         })
-    });
+    },[]);
 
     return(
-        <div className="row col-4 offset-4">
+        <div className="row col-4 offset-4 mb-5">
             <Pie
                 data={regionData}
                 options={{
