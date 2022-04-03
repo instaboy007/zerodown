@@ -1,11 +1,11 @@
-### "**US Housing Market Dynamics**" 
+### **US Housing Market Dynamics**
 
 ## Technologies Used
-# * React.js
-# * Flask
-# * MongoDB
-# * Github
-# * Heroku
+* React.js
+* Flask
+* MongoDB
+* Github
+* Heroku
 
 ## App Link
    
