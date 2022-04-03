@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/zerodown/static/css/main.6974310e.css",
+    "main.js": "/zerodown/static/js/main.d662cdea.js",
+    "static/js/787.55a0c130.chunk.js": "/zerodown/static/js/787.55a0c130.chunk.js",
+    "static/media/fa-solid-900.svg": "/zerodown/static/media/fa-solid-900.7a8b4f130182d19a2d7c.svg",
+    "static/media/fa-brands-400.svg": "/zerodown/static/media/fa-brands-400.2f517e09eb2ca6650ff5.svg",
+    "static/media/fa-solid-900.eot": "/zerodown/static/media/fa-solid-900.9bbb245e67a133f6e486.eot",
+    "static/media/fa-solid-900.ttf": "/zerodown/static/media/fa-solid-900.be9ee23c0c6390141475.ttf",
+    "static/media/fa-regular-400.svg": "/zerodown/static/media/fa-regular-400.4689f52cc96215721344.svg",
+    "static/media/fa-brands-400.eot": "/zerodown/static/media/fa-brands-400.23f19bb08961f37aaf69.eot",
+    "static/media/fa-brands-400.ttf": "/zerodown/static/media/fa-brands-400.527940b104eb2ea366c8.ttf",
+    "static/media/fa-solid-900.woff": "/zerodown/static/media/fa-solid-900.eeccf4f66002c6f2ba24.woff",
+    "static/media/fa-brands-400.woff": "/zerodown/static/media/fa-brands-400.2285773e6b4b172f07d9.woff",
+    "static/media/fa-solid-900.woff2": "/zerodown/static/media/fa-solid-900.1551f4f60c37af51121f.woff2",
+    "static/media/fa-brands-400.woff2": "/zerodown/static/media/fa-brands-400.d878b0a6a1144760244f.woff2",
+    "static/media/fa-regular-400.eot": "/zerodown/static/media/fa-regular-400.77206a6bb316fa0aded5.eot",
+    "static/media/fa-regular-400.ttf": "/zerodown/static/media/fa-regular-400.491974d108fe4002b2aa.ttf",
+    "static/media/fa-regular-400.woff": "/zerodown/static/media/fa-regular-400.bb58e57c48a3e911f15f.woff",
+    "static/media/fa-regular-400.woff2": "/zerodown/static/media/fa-regular-400.7a3337626410ca2f4071.woff2",
+    "index.html": "/zerodown/index.html",
+    "static/media/arrow_left.svg": "/zerodown/static/media/arrow_left.db6e2d88c7c35a775ce4.svg",
+    "static/media/arrow_right.svg": "/zerodown/static/media/arrow_right.f7c6ac6d310d3b82f0a0.svg",
+    "main.6974310e.css.map": "/zerodown/static/css/main.6974310e.css.map",
+    "main.d662cdea.js.map": "/zerodown/static/js/main.d662cdea.js.map",
+    "787.55a0c130.chunk.js.map": "/zerodown/static/js/787.55a0c130.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6974310e.css",
+    "static/js/main.d662cdea.js"
+  ]
+}
