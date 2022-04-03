@@ -33,7 +33,7 @@ function HeaderComponent(){
         .then(res => {
             const regions = res.data.regions;
             const regionNames = regions.map(region => ({ 
-                label: region.region_name, 
+                label: region.region_name,
                 value: region.region_name 
             }));
             setRegionNames(regionNames);
