@@ -26,12 +26,15 @@ function DoubleLineChartComponent(){
                     {
                         label :'Active Listings',
                         data :listings,
-                        backgroundColor:colorPicker[3]
+                        fill:true,
+                        backgroundColor:'rgba(115, 204, 255,0.2)',
+                        borderColor:'#00a2ff',
                     },
                     {
                         label :'Houses Sold',
                         data :housesSold,
-                        borderColor:colorPicker[5],
+                        fill:false,
+                        borderColor:colorPicker[0],
                     }     
                 ],
             }
@@ -55,7 +58,7 @@ function DoubleLineChartComponent(){
                     }
                 }}
             />
-            <h4 className='offset-4 mb-2'>Region Names Active Listings and Houses Sold</h4>
+            <h4 className='offset-4 mb-2'>Region Names, Active Listings and Houses Sold</h4>
         </div>
         
     );
